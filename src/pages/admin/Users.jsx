@@ -9,7 +9,7 @@ const Users = () => {
     // get all users
     const getUsersList = async () => {
         try {
-            const res = await axios.get('/api/v1/admin/getAllUsers', {
+            const res = await axios.get('https://project1-devathon.vercel.app/api/v1/admin/getAllUsers', {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
@@ -26,7 +26,7 @@ const Users = () => {
     const handleUserAccountStatus = async (record) => {
 
         try {
-            const res = await axios.post('/api/v1/admin/changeUserAccountStatus', {
+            const res = await axios.post('https://project1-devathon.vercel.app/api/v1/admin/changeUserAccountStatus', {
                 record
                 // userId: record._id , isActivate: record.isActivate
             }, {
